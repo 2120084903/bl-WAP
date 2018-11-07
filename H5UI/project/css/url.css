@@ -8,10 +8,11 @@
 
 /*搜索框背景*/
 .index .searchHeader {
-    padding: 3rem .7rem .7rem .7rem;
+    padding: 2rem .7rem 1.5rem .7rem;
     background-color: #50B6FF;
     position: relative;
-    background-image: url(../img/logoBg.png);
+    /*background-image: url(../img/logoBg.png);*/
+    background: url(../img/mtitle_banner.png) no-repeat;
     background-position: center;
     background-size: cover;
 }

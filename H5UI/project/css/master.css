@@ -47,12 +47,13 @@
 
 .index .searchHeader .slogan p {
     text-align: center;
-    color: #cae5f8;
+    color: #666;
     font-size: .7rem;
+    font-weight: bold;
 }
 
 .index .searchHeader .userBtn a i {
-    color: #fff;
+    color: #666;
     font-size: 22px;
 }
 
@@ -72,6 +73,8 @@
 
 .index .searchHeader .searchInput .inputBox {
     position: relative;
+    border: 1px solid #bdc0c6;
+    box-shadow: rgb(122, 128, 143) 0px 7px 34px -12px;
 }
 
 .index .searchHeader .searchInput .inputBox i {
@@ -100,7 +103,7 @@
 
 .index .logoShow .logo {
     display: inline-block;
-    width: 10.5rem;
+    width: 8.5rem;
     overflow: hidden;
     position: relative
 }
@@ -3537,7 +3540,8 @@
     display: block;
     margin-bottom: .5rem;
 }
-.order-admin .order-ul .order-link:last-child{
+
+.order-admin .order-ul .order-link:last-child {
     margin-bottom: 0;
 }
 
