@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#0376f7">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+    <title>白鹿数据</title>
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="icon" href="../img/favicon.icon">
+    <!--rem自适应-->
+    <script src="../js/flexible.js"></script>
+</head>
+<body>
+    <div id="app" class="BL-zk">
+        <div class="view view-main view-init ios-edges" data-url="/">
+            <div class="page userInfo">
+                <!-- 导航 -->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="javascript:history.back(-1)" class="link back">
+                                <i class="icon f7-icons">left</i>
+                            </a>
+                        </div>
+                        <div class="title sliding">个人资料</div>
+                        <div class="right">
+                            <a class="link">
+                                保存
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /导航 -->
+                <!--内容区-->
+                <div class="page-content">
+                    <div class="mianBox">
+                        <div class="InfoMain">
+                            <div class="labelBox mt10">
+                                <div class="layout-list">
+                                    <div class="listBoxMain">
+                                        <div class="formList add-box right-arr">
+                                            <label>头像</label>
+                                            <div class="userFaceBox">
+                                                <i class="photo" id="biPhoto">
+                                                    <img src="../img/userface.jpg">
+                                                </i>
+                                                <input type="file" id="biPhotoInput" class="biPhotoInput" />
+                                            </div>
+                                        </div>
+                                        <!--  -->
+                                        <div class="formList add-box">
+                                            <label>昵称</label>
+                                            <input type="text" value="白鹿数据" placeholder="输入姓名">
+                                        </div>
+                                        <!--  -->
+                                        <div class="formList add-box">
+                                            <label>个人签名</label>
+                                            <input type="text" value="" placeholder="输入签名">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ====== -->
+                            <div class="labelBox mt10">
+                                <div class="layout-list">
+                                    <div class="listBoxMain">
+                                        <div class="formList add-box">
+                                            <label>真实姓名</label>
+                                            <input type="text" value="马云" placeholder="输入姓名">
+                                        </div>
+                                        <!--  -->
+                                        <div class="formList add-box right-arr">
+                                            <label>性别</label>
+                                            <select>
+                                                <option value="">男</option>
+                                                <option value="">女</option>
+                                            </select>
+                                        </div>
+                                        <!--  -->
+                                        <div class="formList add-box right-arr">
+                                            <label>出生日期</label>
+                                            <input type="date" placeholder="输入出生日期" value="2014-04-30">
+                                        </div>
+                                        <!--  -->
+                                        <div class="formList add-box">
+                                            <label>邮箱</label>
+                                            <input type="email" value="16368686@qq.com" placeholder="输入邮箱">
+                                        </div>
+                                        <!--  -->
+                                        <div class="formList add-box right-arr">
+                                            <label>所在城市</label>
+                                            <input type="text" placeholder="请选择" readonly="readonly" id="demo-picker-custom-toolbar" />
+                                        </div>
+                                        <!--  -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ====== -->
+                            <div class="labelBox mt10">
+                                <div class="layout-list">
+                                    <div class="listBoxMain">
+                                        <div class="formList add-box no-border-b">
+                                            <label>个人简介</label>
+                                        </div>
+                                        <div class="formList textBoxTxt">
+                                            <textarea placeholder="" maxlength='150'></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--内容区-->
+            </div>
+        </div>
+    </div>
+
+    <!--浮动内容-->
+
+    <!--/浮动内容-->
+    <!--JavaScript引用-->
+    <script src="../js/jquery-1.8.0.min.js"></script>
+    <script src="../../dist/js/framework7.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/my-app.js"></script>
+    <script src="../js/jquery.color.js"></script>
+
+<script>
+    // 城市联动
+    self.pickerCustomToolbar = app.picker.create({
+        inputEl: '#demo-picker-custom-toolbar',
+        rotateEffect: true,
+        renderToolbar: function () {
+            return '<div class="toolbar">' +
+                '<div class="toolbar-inner">' +
+                '<div class="left">' +
+                '<a href="#" class="link sheet-close">取消</a>' +
+                '</div>' +
+                '<div class="right">' +
+                '<a href="#" class="link sheet-close popover-close">完成</a>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
+        },
+        cols: [
+            {
+                width: '33.33%',
+                textAlign: 'center',
+                values: ['北京市', '四川省', '重庆市', '浙江省', '江苏省', '陕西省', '云南省', '甘肃省'],
+            },
+            {
+                width: '33.33%',
+                textAlign: 'center',
+                values: ('成都市 绵阳市 广安市 简阳市 资阳市').split(' ')
+            },
+            {
+                width: '33.33%',
+                textAlign: 'center',
+                values: ('成华区 高新区 武侯区 锦江区 青羊区 新都区 郫都区').split(' ')
+            },
+        ],
+        on: {
+            open: function (picker) {
+                picker.$el.find('.toolbar-randomize-link').on('click', function () {
+                    var col0Values = picker.cols[0].values;
+                    var col0Random = col0Values[Math.floor(Math.random() * col0Values.length)];
+
+                    var col1Values = picker.cols[1].values;
+                    var col1Random = col1Values[Math.floor(Math.random() * col1Values.length)];
+
+                    var col2Values = picker.cols[2].values;
+                    var col2Random = col2Values[Math.floor(Math.random() * col2Values.length)];
+
+                    picker.setValue([col0Random, col1Random, col2Random]);
+                });
+            },
+        }
+    });
+
+
+
+    //上传图片
+    var result = document.getElementById("biPhoto");
+    var file = document.getElementById("biPhotoInput");
+
+    //判断浏览器是否支持FileReader接口
+    if (typeof FileReader == 'undefined') {
+        result.InnerHTML = "你的浏览器不支持FileReader接口！";
+        //使选择控件不可操作
+        file.setAttribute("disabled", "disabled");
+    } else {
+        file.addEventListener('change', readAsDataURL, false); //如果支持就监听改变事件，一旦改变了就运行readFile函数。
+    }
+    function readAsDataURL() {
+        //检验是否为图像文件
+        var file = document.getElementById("biPhotoInput").files[0];
+        if (!/image\/\w+/.test(file.type)) {
+            alert("文件必须为图片！");
+            return false;
+        }
+        var reader = new FileReader();
+        //将文件以Data URL形式读入页面
+        reader.readAsDataURL(file);
+        reader.onload = function (e) {
+            var result = document.getElementById("biPhoto");
+            //显示文件
+            result.innerHTML = '<img src="' + this.result + '" alt="" />';
+        }
+    };
+</script>
+
+</body>
+
+</html>

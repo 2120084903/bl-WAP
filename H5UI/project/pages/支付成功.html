@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#0376f7">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+    <title>白鹿数据</title>
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="icon" href="../img/favicon.icon">
+    <!--rem自适应-->
+    <script src="../js/flexible.js"></script>
+</head>
+<body>
+<div id="app" class="BL-zk">
+    <div class="view view-main view-init ios-edges" data-url="/">
+        <div class="page">
+            <!-- 导航 -->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="javascript:history.back(-1)" class="link back">
+                            <i class="icon f7-icons">left</i>
+                        </a>
+                    </div>
+                    <div class="title sliding">支付成功</div>
+                    <div class="right">
+                        <a href="../index.html" class="link">
+                            <i class="iconfont icon-home"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /导航 -->
+            <!--内容区-->
+            <div class="page-content">
+                <div class="mianBox">
+                    <div class="paySuccess">
+                        <div class="SuccessBox">
+                            <div class="SuccessHeader o-header">
+                                <div class="o-header__status">
+                                    <i class="iconfont icon-chenggong i-success-border o-header__status__icon"></i>
+                                    <h1 class="o-header__status__title">购买成功</h1>
+                                    <p class="o-header__status__desc">订单已经完成，感谢您在白鹿数据购买产品</p></div>
+                            </div>
+                            <!---->
+                            <div class="o-content__box">
+                                <ul class="o-content__ids">
+                                    <li class="o-content__info-order o-content__info text-ellipsis">
+                                        <span class="o-content__info__name">订单编号</span> <span class="colorRed">5180910590503771</span>
+                                    </li>
+                                    <li class="o-content__info text-ellipsis">
+                                        <span class="o-content__info__name">商品数量</span> <span>1</span>
+                                    </li>
+                                    <li class="o-content__info text-ellipsis">
+                                        <span class="o-content__info__name">商品类型</span> <span>白鹿数据-课程培训</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!---->
+                            <div class="o-pay-type o-content__box">
+                                <div class="o-content__ids clearfix">
+                                    <div class="o-l-pay">
+                                        <span>支付方式：微信支付</span>
+                                    </div>
+                                    <div class="o-r-pay">
+                                        <span>已付总额：</span>
+                                        <span class="em">¥</span>
+                                        <strong class="num">990</strong>
+                                        <span class="smalltxt">元</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!---->
+                            <div class="o-pay-type o-content__box">
+                                <div class="o-content__ids clearfix">
+                                    <div class="o-commodity-show">
+                                        <a href="培训详情.html" class="cardHref clearfix">
+                                            <div class="o-pic">
+                                                <img src="../img/class/3.jpg" alt="白鹿数据-课程培训">
+                                            </div>
+                                            <div class="o-info">
+                                                <div class="infoBox">
+                                                    <h2 class="name">PS软件系统培训课PS软件职业精讲案列实战演习</h2>
+                                                    <div class="num-time clearfix">
+                                                        <div class="date"><span>课堂人数：</span><span>120</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="o-commodity-info">
+                                        <ul class="infoList">
+                                            <li>开课时间：2018-10-09 18:00 至 2018-10-09 22:30</li>
+                                            <li>开课地点：四川省成都市青羊区万达广场</li>
+                                            <li>餐食安排：含晚餐正餐及餐后茶点</li>
+                                            <li>联系电话：13699999999</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!---->
+                            <div class="o-back-btn">
+                                <a href="课程管理.html">课程管理</a>
+                            </div>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--内容区-->
+        </div>
+    </div>
+</div>
+
+<!--浮动内容-->
+
+<!--/浮动内容-->
+<!--JavaScript引用-->
+<script src="../js/jquery-1.8.0.min.js"></script>
+<script src="../../dist/js/framework7.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/my-app.js"></script>
+<script src="../js/jquery.color.js"></script>
+<script>
+    // tab
+    $('.courseAdmin .tab-bar-item').click(function () {
+        var index = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.tabCon .section').eq(index).show().siblings().hide();
+        $('.tab-bar').attr('data-cur-tab', index);
+    });
+</script>
+</body>
+
+</html>

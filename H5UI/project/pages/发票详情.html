@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#0376f7">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+    <title>白鹿数据</title>
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="icon" href="../img/favicon.icon">
+    <!--rem自适应-->
+    <script src="../js/flexible.js"></script>
+</head>
+<body>
+<div id="app" class="BL-zk">
+    <div class="view view-main view-init ios-edges" data-url="/">
+        <div class="page">
+            <!-- 导航 -->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="javascript:history.back(-1)" class="link back">
+                            <i class="icon f7-icons">left</i>
+                        </a>
+                    </div>
+                    <div class="title sliding">发票详情</div>
+                    <div class="right">
+                        <a href="../index.html" class="link">
+                            <i class="iconfont icon-home"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /导航 -->
+            <!--内容区-->
+            <div class="page-content has-f-layer">
+                <div class="mianBox">
+                    <!--发票详情-->
+                    <div class="info-details">
+                        <div class="info-con-box">
+                            <div class="info-layout">
+                                <div class="info-title"><div class="label-l">申请进度</div></div>
+                                <div class="info-ul">
+                                    <div class="info-li border-bottom">
+                                        <div class="li-title">申请状态：</div>
+                                        <div class="li-con"><strong class="colorRed">申请中</strong></div>
+                                    </div>
+                                    <!---->
+                                    <div class="info-li border-bottom">
+                                        <div class="li-title">申请时间：</div>
+                                        <div class="li-con">2018.10.06 12:02:56</div>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="info-layout">
+                                <div class="info-title"><div class="label-l">发票信息</div></div>
+                                <div class="info-ul">
+                                    <div class="info-li border-bottom">
+                                        <div class="li-title">发票金额：</div>
+                                        <div class="li-con">200元</div>
+                                    </div>
+                                    <!---->
+                                    <div class="info-li border-bottom">
+                                        <div class="li-title">发票类型：</div>
+                                        <div class="li-con">公司</div>
+                                    </div>
+                                    <!---->
+                                    <div class="info-li border-bottom">
+                                        <div class="li-title">发票抬头：</div>
+                                        <div class="li-con">北京火花兄弟科技有限公司</div>
+                                    </div>
+                                    <!---->
+                                    <div class="info-li border-bottom">
+                                        <div class="li-title">公司税号：</div>
+                                        <div class="li-con">12546685566</div>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="info-layout">
+                                <div class="info-title"><div class="label-l">配送信息</div></div>
+                                <div class="info-ul">
+                                    <div class="info-li border-bottom">
+                                        <div class="li-title">联系人：</div>
+                                        <div class="li-con">郭毅</div>
+                                    </div>
+                                    <!---->
+                                    <div class="info-li border-bottom">
+                                        <div class="li-title">收货地址：</div>
+                                        <div class="li-con">四川省成都市青羊区苏坡乡青羊万达广场1栋二单元5楼</div>
+                                    </div>
+                                    <!---->
+                                    <div class="info-li border-bottom">
+                                        <div class="li-title">联系电话：</div>
+                                        <div class="li-con">电话</div>
+                                    </div>
+                                    <!---->
+                                    <div class="info-li border-bottom">
+                                        <div class="li-title">快递公司：</div>
+                                        <div class="li-con">顺丰快递</div>
+                                    </div>
+                                    <!---->
+                                    <div class="info-li border-bottom">
+                                        <div class="li-title">快递单号：</div>
+                                        <div class="li-con">145669856623</div>
+                                        <a href="javascript:;" id="copy-num" data-clipboard-text="145669856623">复制单号</a>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--/发票详情-->
+                </div>
+            </div>
+            <!--内容区-->
+        </div>
+    </div>
+</div>
+
+<!--浮动内容-->
+
+<!--/浮动内容-->
+<!--JavaScript引用-->
+<script src="../js/jquery-1.8.0.min.js"></script>
+<script src="../../dist/js/framework7.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/my-app.js"></script>
+<script src="../js/jquery.color.js"></script>
+<script src="../js/clipboard.js"></script>
+<script>
+
+    // 复制快递单号
+    var btn = document.getElementById('copy-num');
+    var clipboard = new Clipboard(btn);
+
+    clipboard.on('success', function(e) {
+        var toastCenter = app.toast.create({
+            text: '复制成功！',
+            position: 'center',
+            closeTimeout: 1000,
+        });
+        toastCenter.open();
+    });
+
+    clipboard.on('error', function(e) {
+        var toastCenter = app.toast.create({
+            text: '复制失败！',
+            position: 'center',
+            closeTimeout: 1000,
+        });
+        toastCenter.open();
+    });
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#0376f7">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+    <title>白鹿数据</title>
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="icon" href="../img/favicon.icon">
+    <!--rem自适应-->
+    <script src="../js/flexible.js"></script>
+</head>
+<body>
+    <div id="app" class="BL-zk">
+        <div class="view view-main view-init ios-edges" data-url="/">
+            <div class="page searchJg">
+                <!-- 导航 -->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="javascript:history.back(-1)" class="link back">
+                                <i class="iconfont icon-home"></i>
+                            </a>
+                        </div>
+                        <div class="title sliding">
+                            <div class="inputSearch">
+                                <input type="search" placeholder="请输入关键词">
+                                <i class="iconfont icon-sousuo"></i>
+                                <div class="selectBox clearfix">
+                                    <select name="searchType">
+                                        <option value="0">政策查询</option>
+                                        <option value="1">发文字号</option>
+                                    </select>
+                                    <i class="iconfont icon-xiajiantou1"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <a href="../index.html" class="link">
+                                <span class="haderFace">
+                                    <img src="../img/userface.jpg" alt="">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /导航 -->
+                <!-- 筛选 -->
+
+                <div class="screenBox">
+                    <div class="screenMain flex">
+                        <div class="listChild">
+                            <a href="#" class="link">
+                                <span>部门</span>
+                                <i class="iconfont icon-xiajiantou1"></i>
+                            </a>
+                        </div>
+                        <div class="listChild">
+                            <a href="#" class="link">
+                                <span>时间</span>
+                                <i class="iconfont icon-xiajiantou1"></i>
+                            </a>
+                        </div>
+                        <div class="listChild">
+                            <a href="#" class="link">
+                                <span>地区</span>
+                                <i class="iconfont icon-xiajiantou1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 筛选内容 -->
+                    <div class="screenCon">
+                        <div class="conList">
+                            <div class="ConChild">
+                                <div class="typeBox normalBox">
+                                    <div class="typeMain">
+                                        <div class="rowboxMain">
+                                            <div class="rowLi active">
+                                                <span class="labelName">中共中央</span>
+                                                <i class="iconfont icon-gou1"></i>
+                                            </div>
+                                            <div class="rowLi">
+                                                <span class="labelName">国务院</span>
+                                                <i class="iconfont icon-gou1"></i>
+                                            </div>
+                                            <div class="rowLi">
+                                                <span class="labelName">国家网信办</span>
+                                                <i class="iconfont icon-gou1"></i>
+                                            </div>
+                                            <div class="rowLi">
+                                                <span class="labelName">交通运输部</span>
+                                                <i class="iconfont icon-gou1"></i>
+                                            </div>
+                                            <div class="rowLi">
+                                                <span class="labelName">工业和信息化部</span>
+                                                <i class="iconfont icon-gou1"></i>
+                                            </div>
+                                            <div class="rowLi">
+                                                <span class="labelName">国家发展和改革委员会</span>
+                                                <i class="iconfont icon-gou1"></i>
+                                            </div>
+                                            <div class="rowLi">
+                                                <span class="labelName">市场监督管理总局</span>
+                                                <i class="iconfont icon-gou1"></i>
+                                            </div>
+                                            <div class="rowLi">
+                                                <span class="labelName">广播电视总局</span>
+                                                <i class="iconfont icon-gou1"></i>
+                                            </div>
+                                            <div class="rowLi">
+                                                <span class="labelName">文化和旅游部</span>
+                                                <i class="iconfont icon-gou1"></i>
+                                            </div>
+                                            <div class="rowLi">
+                                                <span class="labelName">人民银行</span>
+                                                <i class="iconfont icon-gou1"></i>
+                                            </div>
+                                            <div class="rowLi">
+                                                <span class="labelName">银行保险监督管理委员会</span>
+                                                <i class="iconfont icon-gou1"></i>
+                                            </div>
+                                            <div class="rowLi">
+                                                <span class="labelName">证券监督管理委员会</span>
+                                                <i class="iconfont icon-gou1"></i>
+                                            </div>
+                                            <div class="rowLi">
+                                                <span class="labelName">人力资源和社会保障部</span>
+                                                <i class="iconfont icon-gou1"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="typeBtn clearfix">
+                                        <div class="btnLi ResetBtn">重置</div>
+                                        <div class="btnLi SureBtn">确定</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="conList">
+                            <div class="ConChild">
+                                <div class="typeBox normalBox">
+                                    <div class="typeMain pd">
+                                        <ul class="clearfix">
+                                            <li>
+                                                <a href="#">1996</a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="#">1997</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">1998</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">1999</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2000</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2001</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2002</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2003</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2004</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2006</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2007</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2008</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2009</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2010</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2011</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2012</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2013</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2014</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="typeBtn clearfix">
+                                        <div class="btnLi ResetBtn">重置</div>
+                                        <div class="btnLi SureBtn">确定</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="conList">
+                            <div class="ConChild">
+                                <div class="typeBox cityBox">
+                                    <div class="typeMain">
+                                        <div class="rowBox flexTop">
+                                            <div class="leftBox">
+                                                <div class="cityChild">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>全国</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>北京市</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>天津市</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>河北省</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="active">
+                                                            <a href="#">
+                                                                <span>陕西省</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>内蒙古自治区</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>辽宁省</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>吉林省</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>黑龙江省</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>四川省</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>江苏省</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>上海市</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>安徽省</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>福建省</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>湖南省</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>山东省</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>湖北省</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>广东省</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>海南省</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="centerBox">
+                                                <div class="cityChild">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>山西省全省</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>太原市</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>大同市</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>阳泉市</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>长治市</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>晋城市</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>晋中市</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>运城市</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>临汾市</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>吕梁市</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="rightBox">
+                                                <div class="cityChild">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>晋城市</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>市辖区</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>城区</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>沁水县</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>阳城县</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>泽州县</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>高平市</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span>其他</span>
+                                                                <i class="iconfont icon-gou1"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="typeBtn clearfix">
+                                        <div class="btnLi ResetBtn">重置</div>
+                                        <div class="btnLi SureBtn">确定</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                    </div>
+                    <!-- /筛选内容 -->
+                </div>
+                <!-- /筛选 -->
+                <div class="toolbar toolbar-bottom-md">
+                    <div class="toolbar-inner flex">
+                        <a class="link active">
+                            <i class="iconfont icon-shaixuan"></i>
+                            <span class="">匹配度排序</span>
+                        </a>
+                        <a class="link">
+                            <i class="iconfont icon-time-o"></i>
+                            <span class="">时间倒序</span>
+                        </a>
+                    </div>
+                </div>
+
+                    <!--内容区-->
+                <div class="page-content infinite-scroll-content hide-toolbar-on-scroll">
+
+                    <div class="mianBox">
+                        <div class="showSsNum">
+                            <span>找到</span>
+                            <strong>120</strong>
+                            <span>条相关数据</span>
+                        </div>
+                        <div class="newsBox">
+                            <a href="政策详情.html" class="link">
+                                <div class="newList">
+                                    <h1>镇江市人民政府办公室关于印发镇江市2016年深化医药卫生体制改革工作要点的通知</h1>
+                                    <div class="guideBox"><span class="bg-icon"><strong>白鹿晓政</strong>中央高度重视“互联网+医疗健康”工作。《意见》明确了支持“互联网+医疗健康”发展的鲜明态度，突出了鼓励创新、包容审慎的政策导向，明确了融合发展的重点领域和支撑体系，划出了监管和安全底线。</span></div>
+                                    <div class="LabelIcon">
+                                        <ul class="clearfix">
+                                            <li><span class="bgIcon-li">官方解读</span></li>
+                                            <li><span class="bgIcon-li">媒体报道</span></li>
+                                        </ul>
+                                    </div>
+                                    <ul class="clearfix">
+                                        <li>2016-08-02</li>
+                                        <li>江苏省镇江市人民政府办公室</li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="政策详情.html" class="link">
+                                <div class="newList">
+                                    <h1>镇江市人民政府办公室关于印发镇江市2016年深化医药卫生体制改革工作要点的通知</h1>
+                                    <ul class="clearfix">
+                                        <li>2016-08-02</li>
+                                        <li>江苏省镇江市人民政府办公室</li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="政策详情.html" class="link">
+                                <div class="newList">
+                                    <h1>镇江市人民政府办公室关于印发镇江市2016年深化医药卫生体制改革工作要点的通知</h1>
+                                    <ul class="clearfix">
+                                        <li>2016-08-02</li>
+                                        <li>江苏省镇江市人民政府办公室</li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="政策详情.html" class="link">
+                                <div class="newList">
+                                    <h1>镇江市人民政府办公室关于印发镇江市2016年深化医药卫生体制改革工作要点的通知</h1>
+                                    <ul class="clearfix">
+                                        <li>2016-08-02</li>
+                                        <li>江苏省镇江市人民政府办公室</li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="政策详情.html" class="link">
+                                <div class="newList">
+                                    <h1>镇江市人民政府办公室关于印发镇江市2016年深化医药卫生体制改革工作要点的通知</h1>
+                                    <ul class="clearfix">
+                                        <li>2016-08-02</li>
+                                        <li>江苏省镇江市人民政府办公室</li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="政策详情.html" class="link">
+                                <div class="newList">
+                                    <h1>镇江市人民政府办公室关于印发镇江市2016年深化医药卫生体制改革工作要点的通知</h1>
+                                    <ul class="clearfix">
+                                        <li>2016-08-02</li>
+                                        <li>江苏省镇江市人民政府办公室</li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="政策详情.html" class="link">
+                                <div class="newList">
+                                    <h1>镇江市人民政府办公室关于印发镇江市2016年深化医药卫生体制改革工作要点的通知</h1>
+                                    <ul class="clearfix">
+                                        <li>2016-08-02</li>
+                                        <li>江苏省镇江市人民政府办公室</li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="preloader infinite-scroll-preloader"></div>
+                </div>
+                <!--内容区-->
+                <!-- mask -->
+                <div class="mask"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--浮动内容-->
+
+    <!--/浮动内容-->
+    <!--JavaScript引用-->
+    <script src="../js/jquery-1.8.0.min.js"></script>
+    <script src="../../dist/js/framework7.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/my-app.js"></script>
+    <script src="../js/jquery.color.js"></script>
+    <script>
+       //判断搜索框焦点--获取焦点点亮搜索图标，失去焦点熄灭图标
+        $(function() {
+            $('.searchInput .inputBox input').focus(function() {
+                $('.searchInput .inputBox i').addClass('active');
+            });
+            $('.searchInput .inputBox input').blur(function() {
+                $('.searchInput .inputBox i').removeClass('active');
+            });
+        });
+
+       // ==============父筛选
+       $('.searchJg .screenMain .listChild').on('click', function () {
+           var index = $(this).index();
+
+           $(this).toggleClass('active').siblings().removeClass('active');
+           $('.screenCon .conList').eq(index).toggle().siblings().hide();
+           if ($('.searchJg .screenMain .listChild').hasClass('active')) {
+               $('.mask').show();
+           }
+           else {
+               $('.mask').hide();
+           };
+       });
+
+       $('.SureBtn').click(function () {
+           var objDiv=$(this).parent().parent().parent().parent();
+           if (objDiv.css('display')==('none')) {
+               objDiv.show();
+               $('.mask').show();
+           }
+           else {
+               $('.searchJg .screenMain .listChild').removeClass('active');
+               objDiv.hide();
+               $('.mask').hide();
+           };
+       });
+
+       // ==============子筛选目录
+       $('.searchJg .screenBox .screenCon .typeMain li').click(function () {
+           $(this).addClass('active').siblings().removeClass('active');
+       });
+       $('.rowboxMain .rowLi').click(function () {
+           $(this).addClass('active').siblings().removeClass('active');
+       });
+
+       // ==============排序按钮
+       $('.searchJg .toolbar .toolbar-inner a').click(function () {
+           $(this).addClass('active').siblings().removeClass('active');
+       });
+    </script>
+
+</body>
+
+</html>

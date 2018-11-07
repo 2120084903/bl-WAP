@@ -1,0 +1,20 @@
+@media only screen and (-webkit-device-pixel-ratio: 3) and (device-height: 812px) and (device-width: 375px) and (min-height: 720px), only screen and (device-height: 896px) and (device-width: 414px) and (min-height: 724px) {
+    html:after {
+        content: '';
+        z-index: 99999;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 34px;
+        background: #fff;
+    }
+
+    .iphonex-bottom-fixed {
+        bottom: 34px;
+    }
+
+    #app .has-f-layer {
+        padding-bottom: calc(3rem + 34px);
+    }
+}

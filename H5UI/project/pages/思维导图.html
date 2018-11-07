@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#0376f7">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+    <title>白鹿数据</title>
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="icon" href="../img/favicon.icon">
+    <!--rem自适应-->
+    <script src="../js/flexible.js"></script>
+
+    <!--思维导图-->
+    <link rel="stylesheet" href="../js/jsMind/jsmind.css">
+    <script src="../js/jsMind/jsmind.js"></script>
+    <script src="../js/jsMind/jsmind.draggable.js"></script>
+    <script src="../js/jsMind/jsmind.screenshot.js"></script>
+</head>
+<body>
+
+
+        <div id="jsmind_container"></div>
+
+    <!--浮动内容-->
+
+    <!--/浮动内容-->
+    <!--JavaScript引用-->
+    <script src="../js/jquery-1.8.0.min.js"></script>
+
+
+    <!--思维导图-->
+    <script type="text/javascript">
+        var _jm = null;
+        function load_jsmind(){
+            var mind = {
+                "meta":{
+                    "name":"demo",
+                    "author":"hizzgdev@163.com",
+                    "version":"0.2",
+                },
+                "format":"node_tree",
+                "data": {"id":"root", "isroot":true, "topic":"网络预约出租汽车经营服务管理办法","linkurl": "http://data.bailuzhiku.com","children":[
+
+                        {"id":"sub4", "parentid":"root", "topic":"白鹿晓政", "direction":"left","background-color":"#2DADFB","children":[
+                                {"id":"sub41", "parentid":"sub4", "topic":"首次从国家法规层面明确了网约车的合法地位", "background-color":"#2DADFB"}
+                            ]},
+
+
+                        {"id":"sub5", "parentid":"root", "topic":"解读", "direction":"left","background-color":"#2DCEDE","children":[
+                                {"id":"sub51", "parentid":"sub5", "topic":"解读：《网络预约出租汽车经营服务管理暂行办法》", "background-color":"#2DCEDE"},
+                                {"id":"sub52", "parentid":"sub5", "topic":"交通运输部介绍关于网络预约出租汽车经营服务管理暂行办法等内容", "background-color":"#2DCEDE"},
+                                {"id":"sub53", "parentid":"sub5", "topic":"专家：", "background-color":"#2DCEDE"}
+                            ]},
+
+                        {"id":"sub6", "parentid":"root", "topic":"发文机关", "direction":"left","background-color":"#9D96F5","children":[
+                                {"id":"sub61", "parentid":"sub6", "topic":"交通部", "background-color":"#9D96F5"},
+                                {"id":"sub62", "parentid":"sub6", "topic":"工信部", "background-color":"#9D96F5"},
+                                {"id":"sub63", "parentid":"sub6", "topic":"公安部", "background-color":"#9D96F5"},
+                                {"id":"sub64", "parentid":"sub6", "topic":"网信办", "background-color":"#9D96F5"},
+                                {"id":"sub65", "parentid":"sub6", "topic":"工商总局", "background-color":"#9D96F5"},
+                                {"id":"sub66", "parentid":"sub6", "topic":"质检总局", "background-color":"#9D96F5"}
+                            ]},
+
+                        {"id":"sub1", "parentid":"root", "topic":"政策脉络","direction":"right", "background-color":"#FB7293","children":[
+                                {"id":"sub11", "parentid":"sub1", "topic":"交通运输部关于规范发展出租汽车电召服务的通知", "background-color":"#FB7293"},
+                                {"id":"sub12", "parentid":"sub1", "topic":"交通运输部关于《出租汽车经营服务管理规定》（征求意见稿）公开征求意见的通知", "background-color":"#FB7293"},
+                                {"id":"sub13", "parentid":"sub1", "topic":"交通运输部关于征求《关于促进手机软件召车等出租汽车电召服务有序发展的通知（征求意见稿）意见的通知》", "background-color":"#FB7293"},
+                                {"id":"sub14", "parentid":"sub1", "topic":"交通运输部关于深化出租汽车行业改革指导意见等有关文件公开征求意见的通知", "background-color":"#FB7293"},
+                                {"id":"sub15", "parentid":"sub1", "topic":"国务院办公厅关于深化改革推进出租汽车行业健康发展的指导意见", "background-color":"#FB7293"},
+                                {"id":"sub16", "parentid":"sub1", "topic":"交通运输部关于发布《网路预约出租汽车运营服务规范》", "background-color":"#FB7293"}
+                            ]},
+
+                        {"id":"sub2", "parentid":"root", "topic":"媒体报道", "direction":"right", "background-color":"#2DADFB","children":[
+                                {"id":"sub21", "parentid":"sub2", "topic":"网约车经营服务管理暂行办法出台，九大看点解读", "background-color":"#2DADFB"}
+                            ]},
+
+                        {"id":"sub3", "parentid":"root", "topic":"同期行业动态","direction":"right", "background-color":"#2DCEDE","children":[
+                                {"id":"sub31", "parentid":"sub3", "topic":"滴滴约谈", "background-color":"#2DCEDE"},
+                                {"id":"sub32", "parentid":"sub3", "topic":"交通部回应“打车难”的问题：不能用非法经营来缓解", "background-color":"#2DCEDE"},
+                                {"id":"sub33", "parentid":"sub3", "topic":"滴滴获长沙网约车牌照，一周连开四城", "background-color":"#2DCEDE"}
+                            ]},
+                    ]},
+            };
+            var options = {
+                container:'jsmind_container',
+                editable:false,
+                theme:'primary'
+            }
+            _jm = jsMind.show(options,mind);
+        }
+
+        load_jsmind();
+
+        // $(document).ready(function () {
+        //     var mindWidthBox = $('#jsmind_container .theme-primary').height() / 2;
+        //     var mindHeightBox = $('#jsmind_container .theme-primary').width() / 2;
+        //     $('.jsmind-inner').css({
+        //         'margin-left':-mindWidthBox +'px',
+        //         'margin-top':-mindHeightBox +'px'
+        //     })
+        // });
+
+    </script>
+</body>
+
+</html>

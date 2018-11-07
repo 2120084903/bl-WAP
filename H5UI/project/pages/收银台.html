@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#0376f7">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+    <title>白鹿数据</title>
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="icon" href="../img/favicon.icon">
+    <!--rem自适应-->
+    <script src="../js/flexible.js"></script>
+</head>
+<body>
+<div id="app" class="BL-zk">
+    <div class="view view-main view-init ios-edges" data-url="/">
+        <div class="page">
+            <!-- 导航 -->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="javascript:history.back(-1)" class="link back">
+                            <i class="icon f7-icons">left</i>
+                        </a>
+                    </div>
+                    <div class="title sliding">订单支付</div>
+                    <div class="right">
+                        <a href="../index.html" class="link">
+                            <i class="iconfont icon-home"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /导航 -->
+            <!--内容区-->
+            <div class="page-content has-f-layer">
+                <div class="mianBox">
+                    <div class="o-pay-Cashier">
+                        <!---->
+                        <div class="o-info-show">
+                            <div class="ul-li-item">
+                                <div class="select-item">
+                                    <div class="item">
+                                        <div class="title-txt">
+                                            <span>订单号</span>
+                                        </div>
+                                        <div class="r-con show-input">
+                                            <span class="colorRed">5180910590503771</span>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                    <div class="item">
+                                        <div class="title-txt">
+                                            <span>商品数量</span>
+                                        </div>
+                                        <div class="r-con show-input">
+                                            <span>x1</span>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                    <div class="item">
+                                        <div class="title-txt">
+                                            <span>商品名称</span>
+                                        </div>
+                                        <div class="r-con show-input">
+                                            <span>白鹿数据-课程培训</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="o-info-show">
+                            <div class="ul-li-item">
+                                <div class="select-item">
+                                    <div class="item">
+                                        <div class="title-txt">
+                                            <span>合计</span>
+                                        </div>
+                                        <div class="r-con show-input">
+                                            <div class="Price-num">
+                                                <span>¥999.0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!---->
+                        <div class="o-info-show slect-pay-type">
+                            <div class="ul-list-title has-bottom-line">
+                                <p class="title">选择支付方式</p>
+                            </div>
+                            <div class="ul-li-item">
+                                <div class="select-item">
+                                    <div class="item">
+                                        <div class="title-txt pay-icon">
+                                            <i class="iconfont icon-weixin"></i>
+                                            <span>微信支付</span>
+                                        </div>
+                                        <div class="r-con select-box">
+                                            <i class="check-icon iconfont icon-ziyuan2"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                    </div>
+                </div>
+            </div>
+            <!--内容区-->
+        </div>
+    </div>
+</div>
+
+<!--浮动内容-->
+<div class="course-layer f-bottom iphonex-bottom-fixed">
+    <div class="layer-con clearfix">
+        <div class="pay-name">
+            <span>微信支付</span>
+        </div>
+        <div class="go-pay clearfix">
+            <div class="Price-tj">
+                <span>总计¥999</span>
+            </div>
+            <div class="go-pay-btn">
+                <a href="javascript:;">立即支付</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/浮动内容-->
+
+<!--loading-->
+<div class="loading-box hide">
+    <div class="lds-css ng-scope">
+        <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+<!--/loading-->
+
+<!--JavaScript引用-->
+<script src="../js/jquery-1.8.0.min.js"></script>
+<script src="../../dist/js/framework7.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/my-app.js"></script>
+<script src="../js/jquery.color.js"></script>
+<script>
+    // 选择支付方式
+    $('.slect-pay-type .item').click(function () {
+        if ($('.check-icon').hasClass('icon-xuanze')) {
+            $(this).removeClass('active');
+            $(this).find('.check-icon').removeClass('icon-xuanze').addClass('icon-ziyuan2');
+        }
+        else {
+            $(this).addClass('active');
+            $(this).find('.check-icon').removeClass('icon-ziyuan2').addClass('icon-xuanze');
+        }
+    });
+
+    // laoding
+    $('.go-pay-btn').click(function () {
+        $('.loading-box').show();
+        setTimeout(function () {
+            $('.loading-box').hide();
+            location.href = "支付成功.html";
+        }, 3000);
+    });
+
+</script>
+</body>
+
+</html>

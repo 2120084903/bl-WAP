@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#0376f7">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+    <title>白鹿数据</title>
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="icon" href="../img/favicon.icon">
+    <!--rem自适应-->
+    <script src="../js/flexible.js"></script>
+</head>
+<body>
+<div id="app" class="BL-zk">
+    <div class="view view-main view-init ios-edges" data-url="/">
+        <div class="page">
+            <!-- 导航 -->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="javascript:history.back(-1)" class="link back">
+                            <i class="icon f7-icons">left</i>
+                        </a>
+                    </div>
+                    <div class="title sliding">操作成功</div>
+                    <div class="right">
+                        <a href="../index.html" class="link">
+                            <i class="iconfont icon-home"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /导航 -->
+            <!--内容区-->
+            <div class="page-content">
+                <div class="mianBox">
+                    <!--操作成功-->
+                    <div class="state-page">
+                        <div class="state-con">
+                            <div class="state-header-icon">
+                                <i class="iconfont icon-l-cg colorGreen"></i>
+                            </div>
+                            <div class="state-txt">
+                                <p>提交成功</p>
+                            </div>
+                            <div class="state-small">
+                                <span class="down-time colorOrange">5s</span><span>后跳转至详情页</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/操作成功-->
+                </div>
+            </div>
+            <!--内容区-->
+        </div>
+    </div>
+</div>
+
+<!--浮动内容-->
+
+<!--/浮动内容-->
+<!--JavaScript引用-->
+<script src="../js/jquery-1.8.0.min.js"></script>
+<script src="../../dist/js/framework7.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/my-app.js"></script>
+<script type="text/javascript">
+    // 读秒跳转
+    var time=setInterval (showTime, 1000);
+    var second=5;
+    function showTime()
+    {
+        if(second==0)
+        {
+            window.location="发票详情.html";
+            clearInterval(time);
+        }
+        $(".down-time").html('<span>'+second+'s</span>');
+        second--;
+    }
+</script>
+</body>
+
+</html>

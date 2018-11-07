@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#0376f7">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+    <title>白鹿数据</title>
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="icon" href="../img/favicon.icon">
+    <!--rem自适应-->
+    <script src="../js/flexible.js"></script>
+</head>
+<body>
+<div id="app" class="BL-zk">
+    <div class="view view-main view-init ios-edges" data-url="/">
+        <div class="page">
+            <!-- 导航 -->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="javascript:history.back(-1)" class="link back">
+                            <i class="icon f7-icons">left</i>
+                        </a>
+                    </div>
+                    <div class="title sliding">订单详情</div>
+                    <div class="right">
+                        <a href="../index.html" class="link">
+                            <i class="iconfont icon-home"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /导航 -->
+            <!--内容区-->
+            <div class="page-content">
+                <div class="mianBox">
+                   <div class="order-details">
+                       <!--订单头部-->
+                       <div class="o-header-bg">
+                            <div class="complete-tag">
+                                <span>订单状态：</span>
+                                <span>已完成</span>
+                            </div>
+                       </div>
+                       <!--/订单头部-->
+                       <!--订单详情-->
+                       <div class="o-box-info">
+                           <div class="o-info o-basics-info">
+                               <div class="o-details-info">
+                                   <div class="o-info-ul">
+                                       <div class="o-info-list clearfix">
+                                           <div class="list-title">培训类型：</div>
+                                           <div class="list-con colorRed"><strong>在线培训</strong></div>
+                                       </div>
+                                       <div class="o-info-list clearfix">
+                                           <div class="list-title">订单编号：</div>
+                                           <div class="list-con">5180412840100871</div>
+                                       </div>
+                                       <div class="o-info-list clearfix">
+                                           <div class="list-title">订单创建时间：</div>
+                                           <div class="list-con">2018-07-01 03:09:24</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <!---->
+                           <div class="o-info o-product-info">
+                               <div class="o-details-info">
+                                   <div class="o-info-ul">
+                                       <div class="o-info-list clearfix">
+                                           <div class="list-title">课程名称：</div>
+                                           <div class="list-con"><a href="培训详情.html">不凡商学院高管成长营11月1日重磅开营</a></div>
+                                       </div>
+                                       <div class="o-info-list clearfix">
+                                           <div class="list-title">培训地点：</div>
+                                           <div class="list-con">四川省成都市青羊区万达广场</div>
+                                       </div>
+                                       <div class="o-info-list clearfix">
+                                           <div class="list-title">培训时间：</div>
+                                           <div class="list-con">2018-10-09 18:00 至 2018-10-09 22:30</div>
+                                       </div>
+                                       <div class="o-info-list clearfix">
+                                           <div class="list-title">餐食安排：</div>
+                                           <div class="list-con">含晚餐正餐及餐后茶点</div>
+                                       </div>
+                                       <div class="o-info-list clearfix">
+                                           <div class="list-title">联系电话：</div>
+                                           <div class="list-con">13699999999</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <!---->
+                           <div class="o-info o-product-info">
+                               <div class="o-details-info border-bottom">
+                                   <div class="o-info-ul">
+                                       <div class="o-info-list clearfix">
+                                           <div class="list-title">支付方式 ：</div>
+                                           <div class="list-con">微信支付</div>
+                                       </div>
+                                       <div class="o-info-list clearfix">
+                                           <div class="list-title">交易流水号：</div>
+                                           <div class="list-con">5180412840100871</div>
+                                       </div>
+                                       <div class="o-info-list clearfix">
+                                           <div class="list-title">支付成功时间：</div>
+                                           <div class="list-con">2018-07-01 03:09:24</div>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="o-price-show clearfix">
+                                   <div class="price-num">
+                                       <span>支付总金额：</span>
+                                       <span class="money"><em>¥990.00</em></span>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <!--/订单详情-->
+                   </div>
+                </div>
+            </div>
+            <!--内容区-->
+        </div>
+    </div>
+</div>
+
+<!--浮动内容-->
+
+<!--/浮动内容-->
+<!--JavaScript引用-->
+<script src="../js/jquery-1.8.0.min.js"></script>
+<script src="../../dist/js/framework7.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/my-app.js"></script>
+<script src="../js/jquery.color.js"></script>
+<script>
+    // tab
+    $('.courseAdmin .tab-bar-item').click(function () {
+        var index = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.tabCon .section').eq(index).show().siblings().hide();
+        $('.tab-bar').attr('data-cur-tab',index);
+    });
+</script>
+</body>
+
+</html>

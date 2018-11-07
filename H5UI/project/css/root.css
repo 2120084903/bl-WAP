@@ -1,0 +1,24 @@
+/*框架*/
+@import url('../../dist/css/framework7.css');
+@import url('app.css');
+/*主要的*/
+@import url('master.css');
+/*版块*/
+@import url('layout.css');
+/*重置*/
+@import url('reset.css');
+/* 全局 */
+@import url('global.css');
+/* 图片 */
+@import url('url.css');
+/*主题*/
+@import url('themes.css');
+/*媒体查询*/
+@import url('search.css');
+/*字体*/
+@import url('font-awesome.css');
+@import url('http://at.alicdn.com/t/font_630146_kib63sefhu.css');
+
+/* 动画 */
+@import url('PageAnimate.css');
+@import url('animate.min.css');
