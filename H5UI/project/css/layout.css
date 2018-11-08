@@ -226,7 +226,7 @@
 }
 
 .newsBox .newList h1 {
-    font-size: .7rem;
+    font-size: .75rem;
     color: #333;
     font-weight: normal;
 }
@@ -275,11 +275,11 @@
 }
 
 .newsBox .newList ul {
-    margin-top: .5rem;
+    margin-top: .8rem;
 }
 
 .newsBox .newList ul li {
-    font-size: .5rem;
+    font-size: .6rem;
     color: #999;
     float: left;
     margin-right: .75rem;
