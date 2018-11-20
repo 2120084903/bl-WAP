@@ -47,13 +47,12 @@
 
 .index .searchHeader .slogan p {
     text-align: center;
-    color: #666;
+    color: #cae5f8;
     font-size: .7rem;
-    font-weight: bold;
 }
 
 .index .searchHeader .userBtn a i {
-    color: #666;
+    color: #fff;
     font-size: 22px;
 }
 
@@ -73,8 +72,6 @@
 
 .index .searchHeader .searchInput .inputBox {
     position: relative;
-    border: 1px solid #bdc0c6;
-    box-shadow: rgb(122, 128, 143) 0px 7px 34px -12px;
 }
 
 .index .searchHeader .searchInput .inputBox i {
@@ -103,13 +100,60 @@
 
 .index .logoShow .logo {
     display: inline-block;
-    width: 8.5rem;
+    width: 10.5rem;
     overflow: hidden;
     position: relative
 }
 
 .index .logoShow .logo img {
     width: 100%;
+}
+
+.index .logo .logoFont {
+    position: absolute;
+    top: 50%;
+    margin-top: -1rem;
+    left: 0;
+}
+
+.index .logo .logoFont i {
+    font-size: 5rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 2rem;
+    color: #fff;
+}
+
+.index .logo .logoFont i:first-child {
+    margin-left: -1rem;
+    color: #fff;
+}
+
+.index .logo .logoFont i:last-child {
+    font-size: 5rem;
+    margin-left: -.5rem;
+}
+
+.index .toolbarShow {
+    margin-top: 4rem;
+}
+
+.index .toolbarShow .TooLLi {
+    flex: 1;
+    text-align: center;
+}
+
+.index .toolbarShow .TooLLi a {
+    display: inline-block;
+    font-size: .6rem;
+    color: #666;
+    width: 3.3rem;
+    padding: .2rem .3rem;
+    text-align: center;
+}
+
+.index .toolbarShow .TooLLi a i {
+    font-size: 1.3rem;
 }
 
 .index .SloganBox {
@@ -131,61 +175,11 @@
     font-size: .7rem;
 }
 
-.index .item-tab {
-    padding: 0 .65rem;
-    border-bottom: 1px solid #eee;
-    background-color: #fff;
-}
-
-.index .item-tab .tab-list-title {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
-    height: 2.3rem;
-    text-align: center;
-    line-height: 2.3rem;
-    position: relative;
-}
-
-.index .item-tab .tab-list-title:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 1.2rem;
-    height: .1rem;
-    margin-left: -.6rem;
-    border-radius: 2rem;
-    background-color: #fff;
-}
-
-.index .item-tab .tab-list-title.active a {
-    color: #1D9ED2;
-    font-weight: bolder;
-}
-
-.index .item-tab .tab-list-title.active:after {
-    background-color: #1D9ED2;
-}
-
-.index .item-tab .tab-list-title a {
-    width: 100%;
-    color: #444;
-    font-size: .8rem;
-}
-
 .index .layoutLabel {
-    display: none;
     margin-bottom: .5rem;
 }
 
-.index .layoutLabel:first-child {
-    display: block;
-}
-
 .index .layoutLabel .titleTxt {
-    display: none;
     position: relative;
     font-size: .7rem;
     color: #555;
@@ -260,7 +254,7 @@
     left: 0;
     bottom: 0;
     top: auto;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #eee;
     overflow: hidden;
     -webkit-transform-origin: 0 0;
     -moz-transform-origin: 0 0;
